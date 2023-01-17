@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:Models="clr-namespace:PerfectPay.SesionesMaui.Session10_DatabindingDemo.Models"
+             x:Class="PerfectPay.SesionesMaui.Session10_DatabindingDemo.DatabindingDemo"
+             Title="DatabindingDemo">
+    <ContentPage.Resources>
+        <Models:Person x:Key="person"
+                       Name="Peter"
+                       Phone="9999"
+                       Address="X Address" />
+    </ContentPage.Resources>
+    
+    <ScrollView>
+        <VerticalStackLayout>
+            <Label Text="{Binding Source={x:Reference entName}, Path=Text}" />
+            <Entry 
+                x:Name="entName"
+                Text="{Binding Name}"
+                FontSize="50"
+                VerticalOptions="Center"
+                HorizontalOptions="Center"/>
+            <Entry 
+                   Text="{Binding Phone}"
+                   FontSize="50"
+                   VerticalOptions="Center"
+                   HorizontalOptions="Center" />
+            <Entry 
+                   Text="{Binding Address}"
+                   FontSize="50"
+                   VerticalOptions="Center"
+                   HorizontalOptions="Center" />
+            <Button 
+                x:Name="CounterBtn"
+                Text="Click me"
+                HorizontalOptions="Center"
+                Clicked="CounterBtn_Clicked"/>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

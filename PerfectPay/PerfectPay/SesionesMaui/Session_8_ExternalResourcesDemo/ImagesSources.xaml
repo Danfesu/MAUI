@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PerfectPay.SesionesMaui.Session_8_ExternalResourcesDemo.ImagesSources"
+             Title="ImagesSources">
+    <!--<Grid>
+        <Image Source="cargando" IsAnimationPlaying="True"/>
+    </Grid>-->
+    <StackLayout BackgroundColor="Black">
+        <Label FontSize="50"
+               TextColor="White"
+               FontFamily="MyFont"
+               Text="This is a font test" />
+        <Label FontSize="50"
+               TextColor="White"
+               Text="This is a font test" />
+        <!--F1BA codigo del icono; &#x siempre se debe colocar -->
+        
+        <Image>
+            <Image.Source>
+                <FontImageSource 
+                    FontFamily="Icons"
+                    Glyph="&#xF1BA;"
+                    Size="50"/>
+            </Image.Source>
+        </Image>
+    </StackLayout>
+</ContentPage>
