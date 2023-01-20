@@ -1,0 +1,28 @@
+﻿<?xml version = "1.0" encoding = "UTF-8" ?>
+<Application xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:StylesDemo"
+             x:Class="StylesDemo.App">
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary>
+                    <Color x:Key="bgColor">#323031</Color>
+                    <Color x:Key="txtColor">#ffc857</Color>
+                </ResourceDictionary>
+                <ResourceDictionary>
+                    <Style TargetType="StackBase"
+                           ApplyToDerivedTypes="True">
+                        <Setter Property="VerticalOptions"
+                                Value="Center" />
+                        <Setter Property="Padding"
+                                Value="30" />
+                        <Setter Property="Spacing"
+                                Value="25" />
+                    </Style>
+                </ResourceDictionary>
+                <ResourceDictionary Source="Resources/Styles/ButtonStyles.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>
