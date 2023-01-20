@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MAUIVERTER.MVVM.Views.MenuView"
+             Title="MenuView"
+             NavigationPage.HasNavigationBar="False">
+    <ContentPage.Resources>
+        <Color x:Key="TextColor">White</Color>
+        <Color x:Key="AppColor1">#10002b</Color>
+        <Color x:Key="AppColor2">#240046</Color>
+        <Color x:Key="AppColor3">#3c096c</Color>
+        <Color x:Key="AppColor4">#5a189a</Color>
+    </ContentPage.Resources>
+    <Grid 
+        ColumnDefinitions=".33*, .33*, .33*"
+        RowDefinitions=".1*, .3*, .3*, .3*">
+        <Label 
+               FontSize="Large"
+               Grid.ColumnSpan="3"
+               FontAttributes="Bold"
+               Text="- MAUIVERTER -"
+               VerticalTextAlignment="Center"
+               HorizontalTextAlignment="Center"
+               TextColor="{StaticResource TextColor}"
+               BackgroundColor="{StaticResource AppColor4}" />
+        <!--#region Information -->
+        <Grid Grid.Row="1"
+              Padding="15"
+              RowDefinitions=".7*, .3*"
+              BackgroundColor="{StaticResource AppColor1}">
+            <Grid.GestureRecognizers>
+                <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" />
+            </Grid.GestureRecognizers>
+            <Image>
+                <Image.Source>
+                    <FontImageSource Size="50"
+                                     Glyph="&#xF0A0;"
+                                     FontFamily="Icons" />
+                </Image.Source>
+            </Image>
+            <Label Grid.Row="1"
+                   Text="Information"
+                   VerticalTextAlignment="Center"
+                   HorizontalTextAlignment="Center"
+                   TextColor="{StaticResource TextColor}" />
+        </Grid>
+        <!--#endregion-->
+        <!--#region Volumen -->
+        <Grid Grid.Row="1"
+              Padding="15"
+              Grid.Column="1"
+              RowDefinitions=".7*, .3*"
+              BackgroundColor="{StaticResource AppColor2}">
+            <Grid.GestureRecognizers>
+                <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" />
+            </Grid.GestureRecognizers>
+            <Image>
+                <Image.Source>
+                    <FontImageSource Size="50"
+                                     Glyph="&#xF1B2;"
+                                     FontFamily="Icons" />
+                </Image.Source>
+            </Image>
+            <Label Grid.Row="1"
+                   Text="Volume"
+                   VerticalTextAlignment="Center"
+                   HorizontalTextAlignment="Center"
+                   TextColor="{StaticResource TextColor}" />
+        </Grid>
+        <!--#endregion-->
+        <!--#region Length -->
+        <Grid Grid.Row="1"
+              Padding="15"
+              Grid.Column="2"
+              RowDefinitions=".7*, .3*"
+              BackgroundColor="{StaticResource AppColor3}">
+            <Grid.GestureRecognizers>
+                <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" />
+            </Grid.GestureRecognizers>
+            <Image>
+                <Image.Source>
+                    <FontImageSource Size="50"
+                                     Glyph="&#xF044;"
+                                     FontFamily="Icons" />
+                </Image.Source>
+            </Image>
+            <Label Grid.Row="1"
+                   Text="Length"
+                   VerticalTextAlignment="Center"
+                   HorizontalTextAlignment="Center"
+                   TextColor="{StaticResource TextColor}" />
+        </Grid>
+        <!--#endregion-->
+        <!--#region Mass -->
+        <Grid Grid.Row="2"
+              Padding="15"
+              RowDefinitions=".7*, .3*"
+              BackgroundColor="{StaticResource AppColor2}">
+            <Grid.GestureRecognizers>
+                <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" />
+            </Grid.GestureRecognizers>
+            <Image>
+                <Image.Source>
+                    <FontImageSource Size="50"
+                                     Glyph="&#xF24E;"
+                                     FontFamily="Icons" />
+                </Image.Source>
+            </Image>
+            <Label Grid.Row="1"
+                   Text="Mass"
+                   VerticalTextAlignment="Center"
+                   HorizontalTextAlignment="Center"
+                   TextColor="{StaticResource TextColor}" />
+        </Grid>
+        <!--#endregion-->
+        <!--#region Temperature -->
+        <Grid Grid.Row="2"
+              Padding="15"
+              Grid.Column="1"
+              RowDefinitions=".7*, .3*"
+              BackgroundColor="{StaticResource AppColor3}">
+            <Grid.GestureRecognizers>
+                <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" />
+            </Grid.GestureRecognizers>
+            <Image>
+                <Image.Source>
+                    <FontImageSource Size="50"
+                                     Glyph="&#xE801;"
+                                     FontFamily="Icons" />
+                </Image.Source>
+            </Image>
+            <Label Grid.Row="1"
+                   Text="Temperature"
+                   VerticalTextAlignment="Center"
+                   HorizontalTextAlignment="Center"
+                   TextColor="{StaticResource TextColor}" />
+        </Grid>
+        <!--#endregion-->
+        <!--#region Energy -->
+        <Grid Grid.Row="2"
+              Padding="15"
+              Grid.Column="2"
+              RowDefinitions=".7*, .3*"
+              BackgroundColor="{StaticResource AppColor1}">
+            <Grid.GestureRecognizers>
+                <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" />
+            </Grid.GestureRecognizers>
+            <Image>
+                <Image.Source>
+                    <FontImageSource Size="50"
+                                     Glyph="&#xF525;"
+                                     FontFamily="Icons" />
+                </Image.Source>
+            </Image>
+            <Label Grid.Row="1"
+                   Text="Energy"
+                   VerticalTextAlignment="Center"
+                   HorizontalTextAlignment="Center"
+                   TextColor="{StaticResource TextColor}" />
+        </Grid>
+        <!--#endregion-->
+        <!--#region Area -->
+        <Grid Grid.Row="3"
+              Padding="15"
+              RowDefinitions=".7*, .3*"
+              BackgroundColor="{StaticResource AppColor3}">
+            <Grid.GestureRecognizers>
+                <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" />
+            </Grid.GestureRecognizers>
+            <Image>
+                <Image.Source>
+                    <FontImageSource Size="50"
+                                     Glyph="&#xF1FE;"
+                                     FontFamily="Icons" />
+                </Image.Source>
+            </Image>
+            <Label Grid.Row="1"
+                   Text="Area"
+                   VerticalTextAlignment="Center"
+                   HorizontalTextAlignment="Center"
+                   TextColor="{StaticResource TextColor}" />
+        </Grid>
+        <!--#endregion-->
+        <!--#region Speed -->
+        <Grid Grid.Row="3"
+              Padding="15"
+              Grid.Column="1"
+              RowDefinitions=".7*, .3*"
+              BackgroundColor="{StaticResource AppColor1}">
+            <Grid.GestureRecognizers>
+                <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" />
+            </Grid.GestureRecognizers>
+            <Image>
+                <Image.Source>
+                    <FontImageSource Size="50"
+                                     Glyph="&#xE82A;"
+                                     FontFamily="Icons" />
+                </Image.Source>
+            </Image>
+            <Label Grid.Row="1"
+                   Text="Speed"
+                   VerticalTextAlignment="Center"
+                   HorizontalTextAlignment="Center"
+                   TextColor="{StaticResource TextColor}" />
+        </Grid>
+        <!--#endregion-->
+        <!--#region Duration -->
+        <Grid Grid.Row="3"
+              Padding="15"
+              Grid.Column="2"
+              RowDefinitions=".7*, .3*"
+              BackgroundColor="{StaticResource AppColor2}">
+            <Grid.GestureRecognizers>
+                <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" />
+            </Grid.GestureRecognizers>
+            <Image>
+                <Image.Source>
+                    <FontImageSource Size="50"
+                                     Glyph="&#xE800;"
+                                     FontFamily="Icons" />
+                </Image.Source>
+            </Image>
+            <Label Grid.Row="1"
+                   Text="Duration"
+                   VerticalTextAlignment="Center"
+                   HorizontalTextAlignment="Center"
+                   TextColor="{StaticResource TextColor}" />
+        </Grid>
+        <!--#endregion-->
+    </Grid>
+</ContentPage>
