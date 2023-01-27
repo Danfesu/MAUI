@@ -6,10 +6,12 @@
     <DataTemplate x:Key="ProductStyle">
         <SwipeView>
             <SwipeView.LeftItems>
-                <SwipeItem BackgroundColor="DarkRed"
-                           Command="{Binding Source={RelativeSource AncestorType={x:Type ViewModels:DataViewModel}}, Path=DeleteCommand}"
-                           CommandParameter="{Binding}"
-                           IconImageSource="dotnet_bot"/>
+                <SwipeItems>
+                    <SwipeItem BackgroundColor="DarkRed"
+                               Command="{Binding Source={RelativeSource AncestorType={x:Type ViewModels:DataViewModel}}, Path=DeleteCommand}"
+                               CommandParameter="{Binding}"
+                               IconImageSource="dotnet_bot" />
+                </SwipeItems>
             </SwipeView.LeftItems>
             <Grid Padding="15,10,15,0"
                   ColumnDefinitions=".1*, .2*, .7*"
